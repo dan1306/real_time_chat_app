@@ -1,0 +1,17 @@
+.chat{
+    display:  flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+.chat_nav, .chat_txt {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat_dispaly{
+    height: 70vh;
+}
