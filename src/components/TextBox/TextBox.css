@@ -1,0 +1,38 @@
+.TextboxContent{
+    /* border: 1px solid black; */
+    width: 90%;
+    height: 2.5rem;
+    display: flex;
+    /* align-items: end; */
+    flex-direction: row;
+}
+
+.TextboxContent_input{
+    width: 85%;
+    /* bac */
+    border: 1px solid black;
+}
+
+.TextboxContent_send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    background-color: #8ab7da;
+    cursor: pointer;
+    transition: all .4s;
+    color: white;
+
+}
+
+.TextboxContent_send:hover {
+    background-color: #54a5e3;
+    transform: translateY(-1px);
+
+}
+
+.TextboxContent_send:active {
+    /* background-color: #11009E; */
+    transform: translateY(0px);
+
+}

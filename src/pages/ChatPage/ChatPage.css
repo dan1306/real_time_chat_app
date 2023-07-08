@@ -12,6 +12,15 @@
     justify-content: center;
 }
 
+.chat_nav {
+    background-color: #30A2FF;
+}
+
+.chat_txt{
+    background-color: #30A2FF;
+    border-top: .18rem solid white;
+}
+
 .chat_dispaly{
     height: 70vh;
 }
