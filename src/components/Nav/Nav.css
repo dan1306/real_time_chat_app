@@ -45,6 +45,7 @@
 .NavContent_status--BiSolidUser,
 .NavContent_status--BsBellFill {
     margin-left: 1.5rem;
+    /* position: relative; */
 }
 
 .NavContent_status--BiSolidUser,
@@ -58,4 +59,20 @@
 .NavContent_status--BsBellFill:hover,
 .NavContent_status--BsWechat:hover {
     transform: scale(1.15);
+}
+
+.NavContent_status--BsBellFill{
+    position: relative;
+}
+
+.NavContent_status--BsBellFill--notificationIndicator{
+    width: 0.438rem;
+    height: 0.438rem;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    top: -.2rem;
+    left: .85rem;
+    /* background-color: #00008B; */
 }

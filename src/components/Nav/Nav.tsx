@@ -22,6 +22,7 @@ export const Nav = () => {
                 </div>
                 <div className='NavContent_status--BsBellFill'>
                     <BsBellFill size={'1.3rem'} color={'#B6EAFA'} />
+                    <div className="NavContent_status--BsBellFill--notificationIndicator"></div>
                 </div>
                 <div className='NavContent_status--BiSolidUser'>
                     <BiSolidUser size={'1.5rem'} color={'#C4DFDF'} />
