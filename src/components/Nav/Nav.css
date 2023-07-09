@@ -7,3 +7,13 @@
     align-items: center;
     flex-direction: row;
 }
+
+.NavContent_logo, .NavContent_status{
+    width: 50%;
+}
+
+.NavContent_status{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}

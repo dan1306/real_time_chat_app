@@ -18,9 +18,11 @@
 
 .chat_txt{
     background-color: #30A2FF;
-    border-top: .18rem solid white;
+    /* border-top: .01rem solid white; */
 }
 
 .chat_dispaly{
     height: 70vh;
+    display: flex;
+    flex-direction: row;
 }
