@@ -13,26 +13,33 @@
     border: 1px solid black;
 }
 
+.TextboxContent_send--BsSendFill {
+    color: #6875ce;
+    margin-right: .3rem ;
+}
+
 .TextboxContent_send{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 15%;
-    background-color: #8ab7da;
+    background-color: #e1e4fb;
     cursor: pointer;
     transition: all .4s;
-    color: white;
+    color: #6875ce;
 
 }
 
-.TextboxContent_send:hover {
+.TextboxContent_send:hover, .TextboxContent_send:hover .TextboxContent_send--BsSendFill  {
+    color:white
+}
+
+.TextboxContent_send:hover  {
     background-color: #54a5e3;
     transform: translateY(-1px);
 
 }
 
 .TextboxContent_send:active {
-    /* background-color: #11009E; */
     transform: translateY(0px);
-
 }

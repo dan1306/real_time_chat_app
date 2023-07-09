@@ -1,6 +1,6 @@
 .chat_dispaly_dropdowns{
     width: 30%;
-    background-color: #3AB4F2;
+    background-color: #697bf8;
 }
 
 .chat_dispaly_content{
@@ -12,7 +12,7 @@
     margin: 0 .7rem;
     padding: 1rem ;
     height: 100%;
-    border-left: .01rem solid black;
-    border-right: .01rem solid black;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
     background-color: white;
 }
