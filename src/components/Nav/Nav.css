@@ -1,4 +1,4 @@
-.NavContent{
+.NavContent {
     /* height: 1rem; */
     border: 1px solid black;
     width: 90%;
@@ -8,11 +8,35 @@
     flex-direction: row;
 }
 
-.NavContent_logo, .NavContent_status{
+.NavContent_logo {
+    display: flex;
+    align-items: center;
+}
+
+.NavContent_logo--title:hover,
+.NavContent_logo--icon:hover {
+    transform: translateY(-.5rem);
+    color: #e2e3f4;
+}
+
+.NavContent_logo,
+.NavContent_status {
     width: 50%;
 }
 
-.NavContent_status{
+.NavContent_logo--icon {
+    margin-right: 10px;
+    transition: all 1s;
+
+}
+
+.NavContent_logo--title {
+    color: white;
+    transition: all 1s;
+
+}
+
+.NavContent_status {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;

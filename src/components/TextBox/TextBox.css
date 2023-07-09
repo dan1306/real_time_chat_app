@@ -10,12 +10,13 @@
 .TextboxContent_input{
     width: 85%;
     /* bac */
-    border: 1px solid black;
+    border: 1px solid #ccc;
 }
 
 .TextboxContent_send--BsSendFill {
     color: #6875ce;
     margin-right: .3rem ;
+    
 }
 
 .TextboxContent_send{
@@ -27,6 +28,7 @@
     cursor: pointer;
     transition: all .4s;
     color: #6875ce;
+    /* border: 0px solid #ccc; */
 
 }
 
