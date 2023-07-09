@@ -1,11 +1,15 @@
-.chat_dispaly_dropdowns{
+.ChatDispaly-dropdowns{
     width: 30%;
     background-color: #697bf8;
 }
 
-.chat_dispaly_content{
+.ChatDispaly-content{
     width: 70%;
     background-color: #F5F5F5;
+}
+
+.ChatDispaly-dropdowns__list{
+    list-style: none;
 }
 
 .ccc{
