@@ -1,6 +1,6 @@
 .NavContent {
     /* height: 1rem; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 90%;
     height: 3rem;
     display: flex;
@@ -40,4 +40,22 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+.NavContent_status--BiSolidUser,
+.NavContent_status--BsBellFill {
+    margin-left: 1.5rem;
+}
+
+.NavContent_status--BiSolidUser,
+.NavContent_status--BsBellFill,
+.NavContent_status--BsWechat {
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.NavContent_status--BiSolidUser:hover,
+.NavContent_status--BsBellFill:hover,
+.NavContent_status--BsWechat:hover {
+    transform: scale(1.15);
 }
