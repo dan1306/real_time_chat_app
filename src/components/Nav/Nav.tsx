@@ -24,44 +24,26 @@ export const Nav = () => {
                 <div className='NavContent_status--BsWechat' style={{ display: 'flex', flexDirection: 'column' }}>
                     <BsWechat size={'1.5rem'} color={'#A2FF86'} />
                     <div className='NavContent_status--BsWechat--Dropdown'>
-                        <div>
-                            asdasd
-                        </div>
-                        <div>
-                            asdasd
-                        </div>
-                        <div>
-                            asdasd
-                        </div>
+                        <a href="#">Item 1</a>
+                        <a href="#">Item 2</a>
+                        <a href="#">Item 3</a>
                     </div>
                 </div>
                 <div className='NavContent_status--BsBellFill'>
                     <BsBellFill size={'1.3rem'} color={'#B6EAFA'} onMouseOver={(): void => setnewNotification(!newNotification)} />
                     <div className={`${newNotification ? 'NavContent_status--BsBellFill--notificationIndicator' : ''}`}></div>
                     <div className='NavContent_status--BsBellFill--Dropdown'>
-                        <div>
-                            asdasd
-                        </div>
-                        <div>
-                            asdasd
-                        </div>
-                        <div>
-                            asdasd
-                        </div>
+                        <a href="#">Item 1</a>
+                        <a href="#">Item 2</a>
+                        <a href="#">Item 3</a>
                     </div>
                 </div>
                 <div className='NavContent_status--BiSolidUser'>
                     <BiSolidUser size={'1.5rem'} color={'#C4DFDF'} />
                     <div className='NavContent_status--BiSolidUser--Dropdown'>
-                        <div>
-                            asdasd
-                        </div>
-                        <div>
-                            asdasd
-                        </div>
-                        <div>
-                            asdasd
-                        </div>
+                        <a href="#">Item 1</a>
+                        <a href="#">Item 2</a>
+                        <a href="#">Item 3</a>
                     </div>
                 </div>
             </div>
