@@ -1,7 +1,7 @@
 import React from 'react'
 import './ChatDisplay.css'
 import { BiSolidUser } from 'react-icons/bi';
-import { GiWalkieTalkie} from 'react-icons/gi'
+import { GiWalkieTalkie } from 'react-icons/gi'
 
 export const ChatDisplay = () => {
     return (
@@ -22,8 +22,36 @@ export const ChatDisplay = () => {
                                 Chat Groups
                             </h3>
                         </div>
-                        <div>
-                            Chat Groups DropDown
+                        <div style={{
+                            height: '9rem', /* Set the desired height */
+                            overflow: 'auto',
+                            width: '75%',
+                            border: '3px solid #ccc',
+                            backgroundColor: '#4E4FEB',
+                            borderRadius: '.5rem',
+                            padding: '.4rem'
+                        }}>
+                            <div>
+                                Chat Groups DropDown
+                            </div>
+                            <div>
+                                Chat Groups DropDown
+                            </div>
+                            {/* <div>
+                                Chat Groups DropDown
+                            </div>
+                            <div>
+                                Chat Groups DropDown
+                            </div>
+                            <div>
+                                Chat Groups DropDown
+                            </div>
+                            <div>
+                                Chat Groups DropDown
+                            </div>
+                            <div>
+                                Chat Groups DropDown
+                            </div> */}
                         </div>
                     </li>
                     <li>
@@ -40,7 +68,15 @@ export const ChatDisplay = () => {
                                 Users
                             </h3>
                         </div>
-                        <div>
+                        <div style={{
+                            height: '9rem', /* Set the desired height */
+                            overflow: 'auto',
+                            width: '75%',
+                            border: '3px solid #ccc',
+                            backgroundColor: '#4E4FEB',
+                            borderRadius: '.5rem',
+                            padding: '.4rem'
+                        }}>
                             Users DropDown
                         </div>
                     </li>
