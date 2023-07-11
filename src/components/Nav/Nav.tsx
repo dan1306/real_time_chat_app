@@ -9,7 +9,7 @@ export const Nav = () => {
 
     const [newNotification, setnewNotification] = useState(false)
 
-    
+
     return (
         <div className='NavContent'>
             <div className='NavContent_logo'>
@@ -21,15 +21,48 @@ export const Nav = () => {
                 </h1>
             </div>
             <div className='NavContent_status'>
-                <div className='NavContent_status--BsWechat'>
+                <div className='NavContent_status--BsWechat' style={{ display: 'flex', flexDirection: 'column' }}>
                     <BsWechat size={'1.5rem'} color={'#A2FF86'} />
+                    <div className='NavContent_status--BsWechat--Dropdown'>
+                        <div>
+                            asdasd
+                        </div>
+                        <div>
+                            asdasd
+                        </div>
+                        <div>
+                            asdasd
+                        </div>
+                    </div>
                 </div>
                 <div className='NavContent_status--BsBellFill'>
-                    <BsBellFill size={'1.3rem'} color={'#B6EAFA'} onClick={():void => setnewNotification(!newNotification)} />
+                    <BsBellFill size={'1.3rem'} color={'#B6EAFA'} onMouseOver={(): void => setnewNotification(!newNotification)} />
                     <div className={`${newNotification ? 'NavContent_status--BsBellFill--notificationIndicator' : ''}`}></div>
+                    <div className='NavContent_status--BsBellFill--Dropdown'>
+                        <div>
+                            asdasd
+                        </div>
+                        <div>
+                            asdasd
+                        </div>
+                        <div>
+                            asdasd
+                        </div>
+                    </div>
                 </div>
                 <div className='NavContent_status--BiSolidUser'>
                     <BiSolidUser size={'1.5rem'} color={'#C4DFDF'} />
+                    <div className='NavContent_status--BiSolidUser--Dropdown'>
+                        <div>
+                            asdasd
+                        </div>
+                        <div>
+                            asdasd
+                        </div>
+                        <div>
+                            asdasd
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

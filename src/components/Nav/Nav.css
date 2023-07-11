@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin-right: 2rem;
 }
 
 .NavContent_status--BiSolidUser,
@@ -51,21 +52,37 @@
 .NavContent_status--BiSolidUser,
 .NavContent_status--BsBellFill,
 .NavContent_status--BsWechat {
-    cursor: pointer;
-    transition: all .3s;
+    /* cursor: pointer; */
+    /* transition: all .3s; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.NavContent_status--BiSolidUser:hover,
+/* .NavContent_status--BiSolidUser:hover,
 .NavContent_status--BsBellFill:hover,
 .NavContent_status--BsWechat:hover {
     transform: scale(1.15);
+} */
+
+.NavContent_status--BiSolidUser--Dropdown,
+.NavContent_status--BsBellFill--Dropdown,
+.NavContent_status--BsWechat--Dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 6rem;
+    top: 2rem;
+    left: -2rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
-.NavContent_status--BsBellFill{
+.NavContent_status--BsBellFill {
     position: relative;
 }
 
-.NavContent_status--BsBellFill--notificationIndicator{
+.NavContent_status--BsBellFill--notificationIndicator {
     width: 0.438rem;
     height: 0.438rem;
     background-color: #e0e0e0;
@@ -75,4 +92,10 @@
     top: -.2rem;
     left: .85rem;
     /* background-color: #00008B; */
+}
+
+.NavContent_status--BiSolidUser:hover .NavContent_status--BiSolidUser--Dropdown,
+.NavContent_status--BsBellFill-:hover .NavContent_status--BsBellFill--Dropdown,
+.NavContent_status--BsWechat:hover .NavContent_status--BsWechat--Dropdown {
+    display: block;
 }
