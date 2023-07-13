@@ -8,7 +8,7 @@ interface Props {
     message: string
 }
 
-export const ChatDisplay = ({message}: Props) => {
+export const ChatDisplay = ({ message }: Props) => {
     return (
         <>
             <div className='ChatDispaly-dropdowns'>
@@ -36,29 +36,7 @@ export const ChatDisplay = ({message}: Props) => {
                             borderRadius: '.5rem',
                             // padding: '.4rem'
                         }}>
-                            {/* <div style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                justifyContent: 'center',
-                                // paddingTop: '.2rem',
-                                backgroundColor: '#566175',
-                                margin: 0,
-                                borderBottom: '3px solid #ADD8E6'
-                            }}>
-                                <input style={{
-                                    width: '90%',
-                                    border: 'none',
-                                    backgroundColor: '#566175',
-                                    color: 'white'
-                                }} />
-                                <span style={{
-                                    padding: '.2rem',
-                                    borderLeft: '2px solid #ADD8E6',
-                                    cursor: 'pointer'
-                                }}>
-                                    <BsSearch size={'1rem'} color={'white'} />
-                                </span>
-                            </div> */}
+
                             <Search />
                             <div style={{
                                 display: 'flex',
@@ -93,21 +71,7 @@ export const ChatDisplay = ({message}: Props) => {
                                 }}>online</div>
 
                             </div>
-                            {/* <div>
-                                Chat Groups DropDown
-                            </div>
-                            <div>
-                                Chat Groups DropDown
-                            </div>
-                            <div>
-                                Chat Groups DropDown
-                            </div>
-                            <div>
-                                Chat Groups DropDown
-                            </div>
-                            <div>
-                                Chat Groups DropDown
-                            </div> */}
+
                         </div>
                     </li>
                     <li>
@@ -133,29 +97,7 @@ export const ChatDisplay = ({message}: Props) => {
                             borderRadius: '.5rem',
                             // padding: '.4rem'
                         }}>
-                            {/* <div style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                justifyContent: 'center',
-                                // paddingTop: '.2rem',
-                                backgroundColor: '#566175',
-                                margin: 0,
-                                borderBottom: '3px solid #ADD8E6'
-                            }}>
-                                <input style={{
-                                    width: '90%',
-                                    border: 'none',
-                                    backgroundColor: '#566175',
-                                    color: 'white'
-                                }} />
-                                <span style={{
-                                    padding: '.2rem',
-                                    borderLeft: '2px solid #ADD8E6',
-                                    cursor: 'pointer'
-                                }}>
-                                    <BsSearch size={'1rem'} color={'white'} />
-                                </span>
-                            </div> */}
+
                             <Search />
                             <div style={{
                                 display: 'flex',
@@ -190,28 +132,151 @@ export const ChatDisplay = ({message}: Props) => {
                                 }}>online</div>
 
                             </div>
-                            {/* <div>
-                                Chat Groups DropDown
-                            </div>
-                            <div>
-                                Chat Groups DropDown
-                            </div>
-                            <div>
-                                Chat Groups DropDown
-                            </div>
-                            <div>
-                                Chat Groups DropDown
-                            </div>
-                            <div>
-                                Chat Groups DropDown
-                            </div> */}
+
                         </div>
                     </li>
                 </ul>
             </div>
             <div className='ChatDispaly-content'>
+
                 <div className='ccc'>
-                    {/* {chat_dispaly_content} */}
+                    <div style={{
+                        // margin: 0
+                        // backgroundColor: 'black'
+                    }}>
+                        <span style={{
+                            display: 'inline-block',
+                            width: '37.5%',
+
+                        }}>
+                            {/* <p style={{
+                                backgroundColor: 'yellow'
+                            }}>ad</p> */}
+                        </span>
+                        <span style={{
+                            display: 'inline-block',
+                            width: '25%',
+                            textAlign: 'center',
+                        }}>
+                            <p style={{
+                                backgroundColor: 'red',
+                                fontSize: '.7rem'
+                            }}>
+                                Tue, May 23, 7:28 PM
+                            </p>
+                        </span>
+                        <span style={{
+                            display: 'inline-block',
+                            width: '37.5%',
+                            textAlign: 'right',
+
+                            // alignContent: 
+                        }}>
+                            {/* <p style={{
+                                backgroundColor: 'yellow'
+
+                            }}>
+                                12 asfaf
+
+                            </p> */}
+                        </span>
+                    </div>
+                    <div style={{
+                        // margin: 0
+                        // backgroundColor: 'black'
+                    }}>
+                        <span style={{
+                            display: 'inline-block',
+                            width: '37.5%',
+
+
+                        }}>
+                            {/* <p style={{
+                                backgroundColor: 'yellow'
+                            }}>ad</p> */}
+                        </span>
+                        <span style={{
+                            display: 'inline-block',
+                            width: '25%',
+                            textAlign: 'center',
+                            backgroundColor: 'red'
+                        }}>
+                            {/* <p style={{
+                                backgroundColor: 'yellow'
+
+                            }}>
+                            </p> */}
+                        </span>
+                        <span style={{
+                            display: 'inline-block',
+                            width: '37.5%',
+                            textAlign: 'right',
+                            // backgroundColor: 'yellow'
+                            // alignContent: 
+                        }}>
+                            <p style={{
+                                // padding: '0 rem',
+                                backgroundColor: 'yellow',
+                                width: '100%',
+                                overflowWrap: 'break-word'
+                            }}>
+                                12 asfaf safsaffaf asfsfs fdgf s
+
+                            </p>
+                        </span>
+                    </div>
+                    <div style={{
+                        // margin: 0
+                        // backgroundColor: 'black'
+                    }}>
+                        <span style={{
+                            display: 'inline-block',
+                            width: '37.5%',
+
+
+                        }}>
+                            {/* <p style={{
+                                backgroundColor: 'yellow'
+                            }}>ad</p> */}
+                            <p style={{
+                                padding: '0 .3rem',
+                                backgroundColor: 'green',
+                                width: '100%',
+                                overflowWrap: 'break-word'
+                            }}>
+                                12 asfaf safsaffaf asfsfs fdgf s
+
+                            </p>
+                        </span>
+                        <span style={{
+                            display: 'inline-block',
+                            width: '25%',
+                            textAlign: 'center',
+                            backgroundColor: 'red'
+                        }}>
+                            {/* <p style={{
+                                backgroundColor: 'yellow'
+
+                            }}>
+                            </p> */}
+                        </span>
+                        <span style={{
+                            display: 'inline-block',
+                            width: '37.5%',
+                            textAlign: 'right',
+                            // backgroundColor: 'yellow'
+                            // alignContent: 
+                        }}>
+                            {/* <p style={{
+                                backgroundColor: 'yellow',
+                                width: '100%',
+                                overflowWrap: 'break-word'
+                            }}>
+                                12 asfaf safsaffaf asfsfs fdgf s
+
+                            </p> */}
+                        </span>
+                    </div>
                     {
                         message || 'chat_dispaly_content'
                     }
