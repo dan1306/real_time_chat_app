@@ -5,24 +5,39 @@ import { useState, useEffect } from "react";
 
 const socket = io("http://localhost:3001");
 
-export const TextBox = () => {
+interface Props {
+    setDisplayMessage: (msg: string) => void
+}
+
+export const TextBox = ({setDisplayMessage}: Props) => {
+
+    const [message, setMessage] = useState('')
 
     // useState [Obj, setObj] = useState<{message: string}>({} as {message: string})
 
     const sendMessage = () => {
-        socket.emit("send_message", { message: "HELLO WORLD" });
+        socket.emit("send_message", { message });
     }
 
     useEffect(() => {
-        socket.on('recieve_message', (data: {message: string}) => {
-            alert(data.message)
+        socket.on('recieve_message', (data: { message: string }) => {
+            console.log(data.message)
+            setDisplayMessage(data.message)
         })
     }, [socket])
 
     return (
         <div className='TextboxContent'>
-            <input placeholder='Enter A Message' className='TextboxContent_input' />
-            <div className='TextboxContent_send' onClick={() => sendMessage()}>
+            <input placeholder='Enter A Message' className='TextboxContent_input' onChange={(e) => {
+                const { value } = e.target
+                setMessage(value)
+
+
+            }} />
+            <div className='TextboxContent_send' onClick={() => {
+                // alert(message)
+                sendMessage()
+            }}>
                 <BsSendFill className='TextboxContent_send--BsSendFill' /> send
             </div>
         </div>

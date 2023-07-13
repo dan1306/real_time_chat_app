@@ -3,18 +3,28 @@ import './ChatPage.css'
 import { Nav } from '../../components/Nav/Nav'
 import { TextBox } from '../../components/TextBox/TextBox'
 import { ChatDisplay } from '../../components/ChatDisplay/ChatDisplay'
+import { useState } from 'react'
 
 export const ChatPage = () => {
+
+    const [message, setMessage] = useState<string>('')
+
+    const setDisplayMessage = (msg: string) => {
+        setMessage(msg)
+    }
+
+
+
     return (
         <div className='chat'>
             <div className='chat_nav'>
                 <Nav />
             </div>
             <div className='chat_dispaly'>
-                <ChatDisplay />
+                <ChatDisplay message={message} />
             </div>
             <div className='chat_txt'>
-                <TextBox />
+                <TextBox setDisplayMessage={setDisplayMessage} />
             </div>
         </div>
 

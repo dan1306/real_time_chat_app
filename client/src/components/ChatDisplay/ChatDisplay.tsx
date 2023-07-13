@@ -4,7 +4,11 @@ import { BiSolidUser } from 'react-icons/bi';
 import { GiWalkieTalkie } from 'react-icons/gi'
 import { Search } from '../Search/Search';
 
-export const ChatDisplay = () => {
+interface Props {
+    message: string
+}
+
+export const ChatDisplay = ({message}: Props) => {
     return (
         <>
             <div className='ChatDispaly-dropdowns'>
@@ -207,7 +211,10 @@ export const ChatDisplay = () => {
             </div>
             <div className='ChatDispaly-content'>
                 <div className='ccc'>
-                    chat_dispaly_content
+                    {/* {chat_dispaly_content} */}
+                    {
+                        message || 'chat_dispaly_content'
+                    }
                 </div>
             </div>
         </>
