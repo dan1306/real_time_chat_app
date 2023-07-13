@@ -8,12 +8,9 @@ const cors = require("cors");
 
 app.use(cors());
 
-
-const io = require('socket.io')(server, {
-    cors: {
-        
-    }
-})
+const io = require("socket.io")(server, {
+  cors: {},
+});
 // const io = new Server(server, {
 //   cors: {
 //     origin: "http://localhost:5173/",
@@ -24,9 +21,13 @@ const io = require('socket.io')(server, {
 io.on("connection", function (socket) {
   console.log(`a user connected ${socket.id}`);
   // whenever we receive a 'message' we log it out
-//   socket.on("message", function (message) {
-//     console.log(message);
-//   });
+  //   socket.on("message", function (message) {
+  //     console.log(message);
+  //   });
+    socket.on('send_message', (data) => {
+        console.log(data)
+        socket.broadcast.emit('recieve_message', data)
+    })
 });
 
 app.get("/", (req, res) => {

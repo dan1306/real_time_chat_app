@@ -10,23 +10,19 @@ export const TextBox = () => {
     // useState [Obj, setObj] = useState<{message: string}>({} as {message: string})
 
     const sendMessage = () => {
-        socket.emit("message", "HELLO WORLD");
+        socket.emit("send_message", { message: "HELLO WORLD" });
     }
 
     useEffect(() => {
-
-        socket.on('new-remote-operartions', ({editorId, op}: {editorId: string, op: string}) => {
-            console.log([editorId, op ])
+        socket.on('recieve_message', (data: {message: string}) => {
+            alert(data.message)
         })
-
-    }, [])
+    }, [socket])
 
     return (
         <div className='TextboxContent'>
             <input placeholder='Enter A Message' className='TextboxContent_input' />
-            <div className='TextboxContent_send' onClick={() => {
-                socket.emit('new-operartions', {editorId: 'ion', op: 'asdsaf'})
-            }}>
+            <div className='TextboxContent_send' onClick={() => sendMessage()}>
                 <BsSendFill className='TextboxContent_send--BsSendFill' /> send
             </div>
         </div>
