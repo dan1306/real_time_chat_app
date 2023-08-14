@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ChatPage.css'
 import { Nav } from '../../components/Nav/Nav'
 import { TextBox } from '../../components/TextBox/TextBox'
@@ -7,11 +7,16 @@ import { useState } from 'react'
 
 export const ChatPage = () => {
 
-    const [message, setMessage] = useState<string>('')
+    const [message, setMessage] = useState<string[]>([])
 
     const setDisplayMessage = (msg: string) => {
-        setMessage(msg)
+        // setMessage(curr => [...curr, msg])
+        console.log(msg)
     }
+
+    // useEffect(() => {
+    //     console.log(message)
+    // }, [message])
 
 
 

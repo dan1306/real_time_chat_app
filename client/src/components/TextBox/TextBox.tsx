@@ -1,7 +1,7 @@
 import './TextBox.css'
 import { BsSendFill } from 'react-icons/bs';
 import io from 'socket.io-client';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const socket = io("http://localhost:3001");
 
@@ -19,9 +19,12 @@ export const TextBox = ({setDisplayMessage}: Props) => {
         socket.emit("send_message", { message });
     }
 
+    // const watchForSocketChage = useCallback
+
     useEffect(() => {
-        socket.on('recieve_message', (data: { message: string }) => {
+        socket.on('recieve_message', (data: { message: string, id: string }) => {
             console.log(data.message)
+            // data.
             setDisplayMessage(data.message)
         })
     }, [socket])

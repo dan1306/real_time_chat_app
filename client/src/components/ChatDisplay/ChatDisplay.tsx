@@ -5,7 +5,7 @@ import { GiWalkieTalkie } from 'react-icons/gi'
 import { Search } from '../Search/Search';
 
 interface Props {
-    message: string
+    message: string[]
 }
 
 export const ChatDisplay = ({ message }: Props) => {
@@ -215,13 +215,13 @@ export const ChatDisplay = ({ message }: Props) => {
                             // alignContent: 
                         }}>
                             <p style={{
-                                // padding: '0 rem',
+                                // padding: '.2rem',
                                 backgroundColor: 'yellow',
-                                width: '100%',
+                                // maxWidth: '100%',
+                                minWidth: '12px',
                                 overflowWrap: 'break-word'
                             }}>
-                                12 asfaf safsaffaf asfsfs fdgf s
-
+                                21
                             </p>
                         </span>
                     </div>
@@ -278,7 +278,70 @@ export const ChatDisplay = ({ message }: Props) => {
                         </span>
                     </div>
                     {
-                        message || 'chat_dispaly_content'
+                        message.length === 0 ?
+                            <>
+                                Chat display content
+                            </>
+                            :
+                            <>
+                            {
+                                message.map((msg, id)=> 
+                                <div style={{
+                                    // margin: 0
+                                    // backgroundColor: 'black'
+                                }}>
+                                    <span style={{
+                                        display: 'inline-block',
+                                        width: '37.5%',
+            
+            
+                                    }}>
+                                        {/* <p style={{
+                                            backgroundColor: 'yellow'
+                                        }}>ad</p> */}
+                                        <p style={{
+                                            padding: '0 .3rem',
+                                            backgroundColor: 'green',
+                                            width: '100%',
+                                            overflowWrap: 'break-word'
+                                        }}>
+                                           {msg}
+            
+                                        </p>
+                                    </span>
+                                    <span style={{
+                                        display: 'inline-block',
+                                        width: '25%',
+                                        textAlign: 'center',
+                                        backgroundColor: 'red'
+                                    }}>
+                                        {/* <p style={{
+                                            backgroundColor: 'yellow'
+            
+                                        }}>
+                                        </p> */}
+                                    </span>
+                                    <span style={{
+                                        display: 'inline-block',
+                                        width: '37.5%',
+                                        textAlign: 'right',
+                                        // backgroundColor: 'yellow'
+                                        // alignContent: 
+                                    }}>
+                                        {/* <p style={{
+                                            backgroundColor: 'yellow',
+                                            width: '100%',
+                                            overflowWrap: 'break-word'
+                                        }}>
+                                            12 asfaf safsaffaf asfsfs fdgf s
+            
+                                        </p> */}
+                                    </span>
+                                </div>
+                                )
+                            }
+                            </>
+                  
                     }
                 </div>
             </div>
