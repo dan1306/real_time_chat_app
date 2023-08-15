@@ -10,7 +10,7 @@ export const ChatPage = () => {
     const [message, setMessage] = useState<string[]>([])
 
     const setDisplayMessage = (msg: string) => {
-        // setMessage(curr => [...curr, msg])
+        setMessage(curr => [...curr, msg])
         console.log(msg)
     }
 

@@ -1,6 +1,9 @@
 .ChatDispaly-dropdowns{
     width: 30%;
     background-color: #697bf8;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
 }
 
 .ChatDispaly-content{
@@ -14,9 +17,10 @@
 
 .ccc{
     margin: 0 .7rem;
-    padding: 1rem ;
+    padding: 1rem 1rem 2rem ;
     height: 100%;
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     background-color: white;
+    overflow: scroll;
 }
