@@ -11,12 +11,16 @@ interface Props {
 
 export const TextBox = ({setDisplayMessage}: Props) => {
 
-    const [message, setMessage] = useState('')
+    const [message, setMessage] = useState<string>('')
+    const [messageEmpty, setMessageEmpty] = useState<boolean>(false)
+
 
     // useState [Obj, setObj] = useState<{message: string}>({} as {message: string})
 
     const sendMessage = () => {
-        socket.emit("send_message", { message });
+        const tempMessage: string = message.trim()
+        if (tempMessage.length !== 0) return socket.emit("send_message", { message });
+        setMessageEmpty(true)
     }
 
     // const watchForSocketChage = useCallback
@@ -30,15 +34,14 @@ export const TextBox = ({setDisplayMessage}: Props) => {
     }, [socket])
 
     return (
-        <div className='TextboxContent'>
-            <input placeholder='Enter A Message' className='TextboxContent_input' onChange={(e) => {
+        <div className='TextboxContent '>
+            <input placeholder='Enter A Message' className={`TextboxContent_input ${messageEmpty ? 'TextboxContent_input_empty' : '' }`} onChange={(e) => {
                 const { value } = e.target
                 setMessage(value)
 
 
-            }} />
+            }} onClick={()=> setMessageEmpty(false)} />
             <div className='TextboxContent_send' onClick={() => {
-                // alert(message)
                 sendMessage()
             }}>
                 <BsSendFill className='TextboxContent_send--BsSendFill' /> send

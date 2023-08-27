@@ -13,6 +13,11 @@
     border: 1px solid #ccc;
 }
 
+.TextboxContent_input_empty {
+    border: 1px solid red;
+
+}
+
 .TextboxContent_send--BsSendFill {
     color: #6875ce;
     margin-right: .3rem ;
