@@ -36,14 +36,16 @@ export const TextBox = ({ setDisplayMessage }: Props) => {
 
     useEffect(() => {
 
-            console.log("socket.id: ", socket.id)
-            // return
-            socket.on('recieve_message', (data: { message: string, id: string }) => {
-                console.log('socketID: ', socketID )
-                // data.
-                const from_host_sender: boolean =  UserId === data.id
-                setDisplayMessage(data.message, from_host_sender )
-            })
+        // return
+        socket.on('recieve_message', (data: { message: string, id: string }) => {
+            console.log(data.id , UserId)
+            console.log(UserId === data.id)
+
+            // console.log('socketID: ', socketID )
+            // data.
+            const from_host_sender: boolean = UserId === data.id
+            setDisplayMessage(data.message, from_host_sender)
+        })
 
     }, [socket])
 
@@ -91,38 +93,38 @@ export const TextBox = ({ setDisplayMessage }: Props) => {
 
 
 
-    // const watchForSocketChage = useCallback
-    // useEffect(() => {
-    //     if (!firstRender) return
+// const watchForSocketChage = useCallback
+// useEffect(() => {
+//     if (!firstRender) return
 
-    //     console.log(socket.id)
-    //     // setSocketID(socket.id)
-    //     setFirstRender(false)
-    //     // console.log('socketID', socketID)
+//     console.log(socket.id)
+//     // setSocketID(socket.id)
+//     setFirstRender(false)
+//     // console.log('socketID', socketID)
 
-    // }, [firstRender])
+// }, [firstRender])
 
-    // useEffect(() => {
+// useEffect(() => {
 
-    //     // const set_first_render = async () => {await setFirstRender(false)}
-    //     if (socketID === '' && socket) {
-    //         // console.log(socket)
-    //         setSocketID(socket.id)
-    //         console.log(socket)
-    //         // console.log()
-    //         return
-    //     }
+//     // const set_first_render = async () => {await setFirstRender(false)}
+//     if (socketID === '' && socket) {
+//         // console.log(socket)
+//         setSocketID(socket.id)
+//         console.log(socket)
+//         // console.log()
+//         return
+//     }
 
-    //     if (socketID !== '' && socket) {
-    //         console.log("socket.id: ", socket.id)
-    //         // return
-    //         socket.on('recieve_message', (data: { message: string, id: string }) => {
-    //             console.log('socketID: ', socketID )
-    //             // data.
-    //             setDisplayMessage(data.message)
-    //         })
-    //     } else {
-    //         console.log('socketID DNE')
-    //     }
+//     if (socketID !== '' && socket) {
+//         console.log("socket.id: ", socket.id)
+//         // return
+//         socket.on('recieve_message', (data: { message: string, id: string }) => {
+//             console.log('socketID: ', socketID )
+//             // data.
+//             setDisplayMessage(data.message)
+//         })
+//     } else {
+//         console.log('socketID DNE')
+//     }
 
-    // }, [socket])
+// }, [socket])

@@ -298,54 +298,51 @@ export const ChatDisplay = ({ message }: Props) => {
                                     message.map((msg, id) =>
                                         <>
                                             {
-                                                msg.host_sender ?
-                                                    <> </>
-                                                    :
-                                                    <> </>
-                                            }
-                                            <div style={{
-                                                // margin: 0
-                                                // backgroundColor: 'black'
-                                            }}>
-                                                <span style={{
-                                                    display: 'inline-block',
-                                                    width: '37.5%',
+                                                msg.host_sender === false ?
+                                                    <>
+                                                        <div style={{
+                                                            // margin: 0
+                                                            // backgroundColor: 'black'
+                                                        }}>
+                                                            <span style={{
+                                                                display: 'inline-block',
+                                                                width: '37.5%',
 
 
-                                                }}>
-                                                    {/* <p style={{
+                                                            }}>
+                                                                {/* <p style={{
                                             backgroundColor: 'yellow'
                                         }}>ad</p> */}
-                                                    <p style={{
-                                                        padding: '0 .3rem',
-                                                        backgroundColor: 'green',
-                                                        width: '100%',
-                                                        overflowWrap: 'break-word'
-                                                    }}>
-                                                        {msg.content}
+                                                                <p style={{
+                                                                    padding: '0 .3rem',
+                                                                    backgroundColor: 'green',
+                                                                    width: '100%',
+                                                                    overflowWrap: 'break-word'
+                                                                }}>
+                                                                    {msg.content}
 
-                                                    </p>
-                                                </span>
-                                                <span style={{
-                                                    display: 'inline-block',
-                                                    width: '25%',
-                                                    textAlign: 'center',
-                                                    backgroundColor: 'red'
-                                                }}>
-                                                    {/* <p style={{
+                                                                </p>
+                                                            </span>
+                                                            <span style={{
+                                                                display: 'inline-block',
+                                                                width: '25%',
+                                                                textAlign: 'center',
+                                                                backgroundColor: 'red'
+                                                            }}>
+                                                                {/* <p style={{
                                             backgroundColor: 'yellow'
             
                                         }}>
                                         </p> */}
-                                                </span>
-                                                <span style={{
-                                                    display: 'inline-block',
-                                                    width: '37.5%',
-                                                    textAlign: 'right',
-                                                    // backgroundColor: 'yellow'
-                                                    // alignContent: 
-                                                }}>
-                                                    {/* <p style={{
+                                                            </span>
+                                                            <span style={{
+                                                                display: 'inline-block',
+                                                                width: '37.5%',
+                                                                textAlign: 'right',
+                                                                // backgroundColor: 'yellow'
+                                                                // alignContent: 
+                                                            }}>
+                                                                {/* <p style={{
                                             backgroundColor: 'yellow',
                                             width: '100%',
                                             overflowWrap: 'break-word'
@@ -353,57 +350,64 @@ export const ChatDisplay = ({ message }: Props) => {
                                             12 asfaf safsaffaf asfsfs fdgf s
             
                                         </p> */}
-                                                </span>
-                                            </div>
+                                                            </span>
+                                                        </div>
+                                                    </>
+                                                    :
+                                                    <>
+
+                                                        <div style={{
+                                                            // margin: 0
+                                                            // backgroundColor: 'black'
+                                                        }}>
+                                                            <span style={{
+                                                                display: 'inline-block',
+                                                                width: '37.5%',
 
 
-
-                                            <div style={{
-                                                // margin: 0
-                                                // backgroundColor: 'black'
-                                            }}>
-                                                <span style={{
-                                                    display: 'inline-block',
-                                                    width: '37.5%',
-
-
-                                                }}>
-                                                    {/* <p style={{
+                                                            }}>
+                                                                {/* <p style={{
                                 backgroundColor: 'yellow'
                             }}>ad</p> */}
-                                                </span>
-                                                <span style={{
-                                                    display: 'inline-block',
-                                                    width: '25%',
-                                                    textAlign: 'center',
-                                                    backgroundColor: 'red'
-                                                }}>
-                                                    {/* <p style={{
+                                                            </span>
+                                                            <span style={{
+                                                                display: 'inline-block',
+                                                                width: '25%',
+                                                                textAlign: 'center',
+                                                                backgroundColor: 'red'
+                                                            }}>
+                                                                {/* <p style={{
                                 backgroundColor: 'yellow'
 
                             }}>
                             </p> */}
-                                                </span>
-                                                <span style={{
-                                                    display: 'inline-block',
-                                                    width: '37.5%',
-                                                    textAlign: 'right',
-                                                    // backgroundColor: 'yellow'
-                                                    // alignContent: 
-                                                }}>
-                                                    <p style={{
-                                                        // padding: '.2rem',
-                                                        backgroundColor: 'yellow',
-                                                        // maxWidth: '100%',
-                                                        minWidth: '12px',
-                                                        overflowWrap: 'break-word'
-                                                    }}>
-                                                        {msg.content}
-                                                    </p>
-                                                </span>
+                                                            </span>
+                                                            <span style={{
+                                                                display: 'inline-block',
+                                                                width: '37.5%',
+                                                                textAlign: 'right',
+                                                                // backgroundColor: 'yellow'
+                                                                // alignContent: 
+                                                            }}>
+                                                                <p style={{
+                                                                    // padding: '.2rem',
+                                                                    backgroundColor: 'yellow',
+                                                                    // maxWidth: '100%',
+                                                                    minWidth: '12px',
+                                                                    overflowWrap: 'break-word'
+                                                                }}>
+                                                                    {msg.content}
+                                                                </p>
+                                                            </span>
 
 
-                                            </div>
+                                                        </div>
+                                                    </>
+                                            }
+
+
+
+
                                         </>
                                     )
                                 }
