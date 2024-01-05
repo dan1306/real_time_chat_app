@@ -7,11 +7,18 @@ import { useState } from 'react'
 
 export const ChatPage = () => {
 
-    const [message, setMessage] = useState<string[]>([])
+    // const [message, setMessage] = useState<string[]>([])
+    const [message, setMessage] = useState<Array<{ host_sender: boolean; content: string }>>([]);
+    // const [messages, setMessages] = useState<Array<{ host_sender: boolean; content: string }>>([]);
 
-    const setDisplayMessage = (msg: string) => {
-        setMessage(curr => [...curr, msg])
-        console.log(msg)
+
+    const setDisplayMessage = (content: string, host_sender: boolean) => {
+        const add_message = {
+            host_sender,
+            content
+        }
+        setMessage(curr => [...curr, add_message])
+        console.log(content)
     }
 
     // useEffect(() => {

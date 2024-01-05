@@ -25,9 +25,10 @@ io.on("connection", function (socket) {
   //     console.log(message);
   //   });
     socket.on('send_message', (data) => {
-      console.log(data)
+     
       data.id = socket.id
-        socket.broadcast.emit('recieve_message', data)
+      console.log("data: ", data )
+      socket.broadcast.emit('recieve_message', data)
     })
 });
 

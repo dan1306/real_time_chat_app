@@ -7,7 +7,7 @@ import { BsBellFill, BsPeopleFill } from 'react-icons/bs';
 
 export const Nav = () => {
 
-    const [newNotification, setnewNotification] = useState(false)
+    const [newNotification, setnewNotification] = useState<boolean>(false)
 
 
     return (
